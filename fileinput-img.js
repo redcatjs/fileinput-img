@@ -10,11 +10,11 @@
 		this.$preview = this.$element.find('.fileinput-preview');
 		this.$remove = this.$element.find('input[type="hidden"][name="'+this.name+'_remove"]');
 		
-		this.$presetted = options.presetted?'<img src="'+options.presetted+'">':'';
-		this.$presettedOrigin = this.$presetted;
-		if(this.$presettedOrigin){
+		this.$preset = options.preset?'<img src="'+options.preset+'">':'';
+		this.$presetOrigin = this.$preset;
+		if(this.$presetOrigin){
 			this.$element.find('[data-remove="fileinput"]').show();
-			this.$preview.append(this.$presetted);
+			this.$preview.append(this.$preset);
 		}
 		
 		var height = this.$preview.css('height');
@@ -85,7 +85,7 @@
 		} else {
 			this.$input.val('');
 		}
-		this.$preview.html(vcenter+this.$presetted);
+		this.$preview.html(vcenter+this.$preset);
 		this.$element.find('.fileinput-filename').text('');
 		this.$element.addClass('fileinput-new').removeClass('fileinput-exists');
 		if(e)
@@ -93,14 +93,14 @@
 		if (e!==false)
 			this.$element.trigger('clear.bs.fileinput-img');	
 		this.$element.find('[data-dismiss="fileinput"]').hide();
-		if(this.$presettedOrigin){
+		if(this.$presetOrigin){
 			this.$element.find('[data-remove="fileinput"]').show();
 		}
 	};
 	
 	Fileinput.prototype.remove = function(e) {
 		//console.log('remove');
-		this.$presetted = '';
+		this.$preset = '';
 		this.clear();
 		this.$remove.val('1');
 		this.$element.find('[data-remove="fileinput"]').hide();
@@ -108,7 +108,7 @@
 	};
 	Fileinput.prototype.restore = function(e) {
 		//console.log('restore');
-		this.$presetted = this.$presettedOrigin;
+		this.$preset = this.$presetOrigin;
 		this.clear();
 		this.$remove.val('');
 		this.$element.find('[data-restore="fileinput"]').hide();
@@ -136,6 +136,14 @@
 			
 			var $this = $(this);
 			var name = $this.attr('name');	
+			var preset = $this.attr('data-src');	
+			var opts;
+			if(typeof(options)=='object'){
+				opts = $.clone(options);
+				if(preset){
+					opts.preset = preset;
+				}
+			}
 			$this
 				.wrap('<div class="fileinput fileinput-exists"></div>')
 				.after(
@@ -149,7 +157,7 @@
 			;
 			var fi = $this.parent();
 			var data = fi.data('fileinput');
-			if (!data) fi.data('fileinput', (data = new Fileinput(fi[0], options)));
+			if (!data) fi.data('fileinput', (data = new Fileinput(fi[0], opts)));
 			if (typeof options == 'string') data[options]();
 		})
 	};
