@@ -138,6 +138,9 @@
 			var name = $this.attr('name');	
 			var preset = $this.attr('data-src');	
 			var opts;
+			if(typeof(options)=='undefined'){
+				options = {};
+			}
 			if(typeof(options)=='object'){
 				opts = $.clone(options);
 				if(preset){
