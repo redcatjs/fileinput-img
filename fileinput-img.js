@@ -148,7 +148,7 @@
 				}
 			}
 			$this
-				.wrap('<div class="fileinput fileinput-exists"></div>')
+				.wrap('<div class="fileinput-img fileinput-exists"></div>')
 				.after(
 					'<span class="fileinput-preview thumbnail" style="width: 200px; height: 150px;" data-trigger="fileinput"><span class="vertical-centerer"></span></span>'
 					+'<span class="fileinput-filename" data-trigger="fileinput"></span>'
