@@ -1,0 +1,78 @@
+.fileinput-img {
+  margin-bottom: 9px;
+  display: inline-block; }
+  .fileinput-img input[type=file] {
+    display: block;
+    height: 150px;
+    opacity: 0;
+    position: absolute;
+    width: 200px; }
+  .fileinput-img .thumbnail {
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 0.5em;
+    margin-right: 0.5em;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px outset #333;
+    border-radius: 8px;
+    padding: 0; }
+    .fileinput-img .thumbnail > img {
+      height: 100%; }
+  .fileinput-img .fileinput-filename {
+    float: left;
+    margin-left: 0.3em;
+    font-size: 1.7em;
+    cursor: pointer; }
+    .fileinput-img .fileinput-filename::before {
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      line-height: normal;
+      -webkit-font-smoothing: antialiased;
+      speak: none;
+      content: "\f\f093\ "; }
+  .fileinput-img [data-dismiss="fileinput"], .fileinput-img [data-restore="fileinput"], .fileinput-img [data-remove="fileinput"] {
+    float: left;
+    margin-left: 0.3em;
+    cursor: pointer;
+    font-size: 1.7em;
+    display: none; }
+  .fileinput-img [data-dismiss="fileinput"]::before {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+    speak: none;
+    content: "\f\f00d\ "; }
+  .fileinput-img [data-remove="fileinput"]::before {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+    speak: none;
+    content: "\f\f00d\ "; }
+  .fileinput-img [data-restore="fileinput"]::before {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+    speak: none;
+    content: "\f\f112\ "; }
+  .fileinput-img .fileinput-preview .vertical-centerer {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+    .fileinput-img .fileinput-preview img {
+      margin-top: 0;
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      vertical-align: middle;
+      display: inline; }
