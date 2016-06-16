@@ -142,7 +142,7 @@
 				options = {};
 			}
 			if(typeof(options)=='object'){
-				opts = $.clone(options);
+				opts = $.extend({},options);
 				if(preset){
 					opts.preset = preset;
 				}
