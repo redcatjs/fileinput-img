@@ -33,7 +33,7 @@
       line-height: normal;
       -webkit-font-smoothing: antialiased;
       speak: none;
-      content: "\f\f093\ "; }
+      content: "\f093\ "; }
   .fileinput-img [data-dismiss="fileinput"], .fileinput-img [data-restore="fileinput"], .fileinput-img [data-remove="fileinput"] {
     float: left;
     margin-left: 0.3em;
@@ -47,7 +47,7 @@
     line-height: normal;
     -webkit-font-smoothing: antialiased;
     speak: none;
-    content: "\f\f00d\ "; }
+    content: "\f00d\ "; }
   .fileinput-img [data-remove="fileinput"]::before {
     font-family: FontAwesome;
     font-style: normal;
@@ -55,7 +55,7 @@
     line-height: normal;
     -webkit-font-smoothing: antialiased;
     speak: none;
-    content: "\f\f00d\ "; }
+    content: "\f00d\ "; }
   .fileinput-img [data-restore="fileinput"]::before {
     font-family: FontAwesome;
     font-style: normal;
@@ -63,7 +63,7 @@
     line-height: normal;
     -webkit-font-smoothing: antialiased;
     speak: none;
-    content: "\f\f112\ "; }
+    content: "\f112\ "; }
   .fileinput-img .fileinput-preview .vertical-centerer {
     display: inline-block;
     height: 100%;
