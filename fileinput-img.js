@@ -62,7 +62,7 @@
 			reader.readAsDataURL(file);
 			this.$element.find('[data-dismiss="fileinput"]').show();
 			this.$element.find('[data-remove="fileinput"]').hide();
-			this.$remove.val('');
+			this.$remove.val('').trigger('j:update');
 			this.$element.find('[data-restore="fileinput"]').hide();
 		} else {
 			this.$element.find('.fileinput-filename').text(file.name);
@@ -83,7 +83,7 @@
 			this.$input.remove();
 			this.$input = inputClone;
 		} else {
-			this.$input.val('');
+			this.$input.val('').trigger('j:update');
 		}
 		this.$preview.html(vcenter+this.$preset);
 		this.$element.find('.fileinput-filename').text('');
@@ -102,7 +102,7 @@
 		//console.log('remove');
 		this.$preset = '';
 		this.clear();
-		this.$remove.val('1');
+		this.$remove.val('1').trigger('j:update');
 		this.$element.find('[data-remove="fileinput"]').hide();
 		this.$element.find('[data-restore="fileinput"]').show();
 	};
@@ -110,7 +110,7 @@
 		//console.log('restore');
 		this.$preset = this.$presetOrigin;
 		this.clear();
-		this.$remove.val('');
+		this.$remove.val('').trigger('j:update');
 		this.$element.find('[data-restore="fileinput"]').hide();
 		this.$element.find('[data-remove="fileinput"]').show();
 	};
